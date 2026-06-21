@@ -1,0 +1,289 @@
+<style>
+
+@font-face {
+    font-family: 'Telegraf Regular';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('fonts/TelegrafRegular_272984568a25d8528fe2de8b20b29011.woff') format('woff');
+    }
+    
+
+@font-face {
+    font-family: 'Telegraf UltraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Telegraf UltraLight 200.woff') format('woff');
+    }
+    
+
+@font-face {
+    font-family: 'Telegraf UltraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Telegraf UltraBold 800.woff') format('woff');
+    }
+
+
+.menu{
+    position: relative;
+    z-index: 0;
+}
+
+.dropbtn {
+    width: 40%;
+    height: 15vh;
+    padding: 16px;
+    border: none;
+
+    background-color: #d2dede;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+
+    cursor: pointer;
+
+
+
+}
+
+.dropbtn.active {
+    background-color: #b9caca;
+
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+
+
+.dropbtn .top {
+    transition: transform 0.5s ease;
+}
+
+.dropbtn.active .top {
+    background-color: #b9caca;
+    transform: translateY(-20px);
+}
+
+.dropbtn .middle {
+    transition: opacity 0.5s ease;
+}
+
+.dropbtn.active .middle {
+    opacity: 0;
+}
+
+.dropbtn .bottom {
+    transition: transform 0.7s ease;
+    
+}
+
+.dropbtn.active .bottom {
+    transform: translateY(410px);
+}
+
+
+
+
+#menu-icon {
+    overflow: visible;
+    fill: #788080;
+    opacity: 0.77;
+}
+
+
+
+
+#menu-text {
+    font-family: "Telegraf UltraBold";
+    font-size: 40px;
+    color: #525757;
+
+    position: absolute; 
+    top: -3vh;
+    left: 5%;;
+
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+#menu-text.show {
+    opacity: 1;
+    z-index: 2;
+
+}
+
+
+
+
+
+.dropdown-content {
+    background-color: #b9caca;
+    font-family: "Telegraf UltraLight";
+    font-size: 23px;
+
+    min-width: 40%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    position: absolute;
+    z-index: 1;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.3s;
+    
+    
+    
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+
+
+.dropdown-content a {
+  color: #525757;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  z-index: 1;
+}
+
+
+
+
+
+#ruler-svg {
+    position: absolute;
+    fill: #788080;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    overflow: visible;
+
+}
+
+
+
+</style>
+
+
+
+
+
+<div class="menu">
+
+    <button class="dropbtn" id="dropbtn">
+
+        <svg id="menu-icon" viewBox="0 0 140 80" width="90" height="200">
+            <rect class="top" width="140" height="10" rx="7"></rect>
+            <rect class="middle" y="30" width="140" height="10" rx="7"></rect>
+            <rect class="bottom" y="60" width="140" height="10" rx="7"></rect>
+        </svg>
+
+    </button>
+
+
+    <div id="menu-text">
+        <p>Menu</p>
+    </div>
+
+
+    <div class="dropdown-content" id="dropdown-content">
+
+        <a href="#">services</a>
+        <a href="#">about</a>
+        <a href="#">reviews </a>
+        <a href="#">get a quote </a>
+        <a href="#">contact </a>
+
+        <svg id="ruler-svg" viewBox="0 0 15 100" width="15" height="100">
+            <rect x="0" y='1' width="15" height="1" ></rect>
+            <rect x="5" y="5" width="10" height="1" ></rect>
+            <rect x="5" y="9" width="10" height="1" ></rect>
+            <rect x="5" y="13" width="10" height="1" ></rect>
+            <rect x="5" y="17" width="10" height="1" ></rect>
+            <rect x="0" y='21' width="15" height="1" ></rect>
+            <rect x="5" y="25" width="10" height="1" ></rect>
+            <rect x="5" y="29" width="10" height="1" ></rect>
+            <rect x="5" y="33" width="10" height="1" ></rect>
+            <rect x="5" y="37" width="10" height="1" ></rect>
+            <rect x="0" y='41' width="15" height="1" ></rect>
+            <rect x="5" y="45" width="10" height="1" ></rect>
+            <rect x="5" y="49" width="10" height="1" ></rect>
+            <rect x="5" y="53" width="10" height="1" ></rect>
+            <rect x="5" y="57" width="10" height="1" ></rect>
+            <rect x="0" y='61' width="15" height="1" ></rect>
+            <rect x="5" y="65" width="10" height="1" ></rect>
+            <rect x="5" y="69" width="10" height="1" ></rect>
+            <rect x="5" y="73" width="10" height="1" ></rect>
+            <rect x="5" y="77" width="10" height="1" ></rect>
+            <rect x="0" y='81' width="15" height="1" ></rect>
+            <rect x="5" y="85" width="10" height="1" ></rect>
+            <rect x="5" y="89" width="10" height="1" ></rect>
+            <rect x="5" y="93" width="10" height="1" ></rect>
+            <rect x="5" y="97" width="10" height="1" ></rect>
+            <rect x="0" y='101' width="15" height="1" ></rect>
+            <rect x="5" y="105" width="10" height="1" ></rect>
+            <rect x="5" y="109" width="10" height="1" ></rect>
+            <rect x="5" y="113" width="10" height="1" ></rect>
+            <rect x="5" y="117" width="10" height="1" ></rect>
+            <rect x="0" y='121' width="15" height="1" ></rect>
+            <rect x="5" y="125" width="10" height="1" ></rect>
+            <rect x="5" y="129" width="10" height="1" ></rect>
+            <rect x="5" y="133" width="10" height="1" ></rect>
+            <rect x="5" y="137" width="10" height="1" ></rect>
+            <rect x="0" y='141' width="15" height="1" ></rect>
+            <rect x="5" y="145" width="10" height="1" ></rect>
+            <rect x="5" y="149" width="10" height="1" ></rect>
+            <rect x="5" y="153" width="10" height="1" ></rect>
+            <rect x="5" y="157" width="10" height="1" ></rect>
+            <rect x="0" y='161' width="15" height="1" ></rect>
+            <rect x="5" y="165" width="10" height="1" ></rect>
+            <rect x="5" y="169" width="10" height="1" ></rect>
+            <rect x="5" y="173" width="10" height="1" ></rect>
+            <rect x="5" y="177" width="10" height="1" ></rect>
+            <rect x="0" y='181' width="15" height="1" ></rect>
+            <rect x="5" y="185" width="10" height="1" ></rect>
+            <rect x="5" y="189" width="10" height="1" ></rect>
+            <rect x="5" y="193" width="10" height="1" ></rect>
+            <rect x="5" y="197" width="10" height="1" ></rect>
+            <rect x="0" y='201' width="15" height="1" ></rect>
+            <rect x="5" y="205" width="10" height="1" ></rect>
+            <rect x="5" y="209" width="10" height="1" ></rect>
+            <rect x="5" y="213" width="10" height="1" ></rect>
+            <rect x="5" y="217" width="10" height="1" ></rect>
+            <rect x="0" y='221' width="15" height="1" ></rect>
+            <rect x="5" y="225" width="10" height="1" ></rect>
+            <rect x="5" y="229" width="10" height="1" ></rect>
+            <rect x="5" y="233" width="10" height="1" ></rect>
+            <rect x="5" y="237" width="10" height="1" ></rect>
+        </svg>
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    
+</script>
