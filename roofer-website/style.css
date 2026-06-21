@@ -95,7 +95,7 @@
     #title-2 {
         font-family: "Telegraf Ultralight";
         font-weight: 400;
-        color: #000000;
+        color: red;
         font-size: clamp(10px, 8vw, 20px);
         text-align: right;
         margin-top: -48px;
