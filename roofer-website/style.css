@@ -1,12 +1,4 @@
-@media (min-width: 501px) {
-    body {
-        display: none;
-        background: red;
-    }
-}
 
-
-@media (max-width: 500px )  {
 
     html, body {
         margin: 0;
@@ -1103,7 +1095,7 @@
 
 
 
-}
+
 
 
 @media (max-width: 410px )  {
