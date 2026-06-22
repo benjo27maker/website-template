@@ -8,6 +8,12 @@
         max-width: 430px
     }
 
+    #book-now-box a {
+        text-decoration: none;
+        color: black;
+
+    }
+
     h1, h2, h3, p {
         margin: 0;
     }
@@ -195,7 +201,7 @@
 
     #menu-text {
         font-family: "Telegraf UltraBold";
-        font-size: clamp(10px, 6vw, 60px);
+        font-size: clamp(10px, 6vw, 25px);
         color: #525757;
 
         position: absolute; 
@@ -402,7 +408,7 @@
 
     
     #slogan {
-        font-size: clamp(25px, 7vw, 40px);
+        font-size: clamp(25px, 7vw, 30px);
         align-self: center;
         font-family: "Telegraf Regular";
         opacity: 0.71;
